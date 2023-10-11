@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body style="display:flex; justify-content: space-around;" >
+
+    <div style="width: 40%; height: 500px;">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <div style="width: 40%; height: 500px;">
+        <canvas id="myChart2"></canvas>
+      </div>
+</body>
+<!-- setup: uma preparação pro gráfico-->
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    // grafico em barras
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+
+        datasets: [
+        {
+        label: 'Temperatura',
+        data: [22, 24, 27, 23, 20, 18],
+        borderColor: '#00008b',
+          backgroundColor: '#00008b',
+        borderWidth: 1
+        },
+
+        {
+          label: 'Umidade',
+          data: [90, 89, 93, 87, 88, 82],
+          borderColor: '#dc143c',
+          backgroundColor: '#dc143c',
+          borderWidth: 1,
+        }
+      ]},
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+   // grafico em linha
+
+const config = document.getElementById('myChart2');
+   new Chart(config, {
+      type: 'line',
+      data: {
+
+        // backgroundColor: 'red',
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+
+        datasets: [{
+          label: 'Temperatura',
+          data: [30, 29, 28, 25, 22, 23],
+          borderColor: '#00008b',
+          backgroundColor: '#00008b',
+          borderWidth: 1
+        },
+        {
+        label: 'Umidade',
+        data: [80, 82, 80, 85, 80, 83],
+        borderColor: '#dc143c',
+        backgroundColor: '#dc143c',
+        borderWidth: 1
+        }
+      
+      ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+  </script>
+    <script>
+        const myChart = new Chart(
+            document.getElementById('myChart'), ctx
+        );
+
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'), config
+        );
+
+    </script>
+
+</html>
