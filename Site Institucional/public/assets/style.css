@@ -43,17 +43,20 @@ body {
     width: 100%;
     margin: auto;
     justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner {
     background-image: url(img/bg-jelly-fish-para_outras_pags.png);
     background-size: cover;
+    height: 600px;
 }
 
 .banner .container {
     justify-content: center;
     align-items: center;
-    height: 470px;
+    height: 600px;
 }
 
 .banner .container p {
@@ -116,9 +119,9 @@ body {
 }
 
 .card{
-    width: 350px;
+    width: 450px;
     height: 400px;
-    background-color: rgba(11, 1, 71, 0.541);
+    /*background-color: rgba(11, 1, 71, 0.541);*/
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -129,18 +132,19 @@ body {
 
 .card h2 {
 margin: 0;
-font-size: 30px;
+font-size: 50px;
 }
 
 .formulario span {
-    font-size:  15px;
-    font-weight:  800;
+    font-size:  25px;
+    font-weight:  1000;
 }
 
 .formulario input {
     border: 2px solid chocolate;
     text-align: center;
     border-radius: 10px;
+    
 }
 
 .login .container{
